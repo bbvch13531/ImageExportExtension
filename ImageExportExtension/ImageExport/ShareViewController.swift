@@ -56,31 +56,19 @@ class ShareViewController: SLComposeServiceViewController {
 //							if let img = item as? UIImage{
 //								imgData = UIImagePNGRepresentation(img)
 //							}
-//
-//							let dict: [String : Any] = ["imgData" :  imgData, "name" : self.contentText]
-//							print("\n\n\n\(dict)")
-//							let userDefault = UserDefaults(suiteName: "group.imageExportor")
-//							userDefault?.set(dict, forKey: "img")
-//							userDefault?.synchronize()
-//
-//						}catch let err{
+//							print("imgData =  \(imgData)")
+//						} catch let err{
 //							print(err)
 //						}
+//					})
+					itemProvider.loadItem(forTypeIdentifier: "public.png", options: nil, completionHandler: {(item,error) in
 						do{
-							var imgData: Data!
-							if let url = item as? URL{
-								imgData = try Data(contentsOf: url)
-							}
-
-							if let img = item as? UIImage{
-								imgData = UIImagePNGRepresentation(img)
-							}
-							print("imgData =  \(imgData)")
-						} catch let err{
-							print(err)
+							print("found image : \(item)")
+							Alamofire.request
+						} catch let error {
+							print(error)
 						}
 					})
-				
 				}
 				else	{
 					print("Cannot find image")

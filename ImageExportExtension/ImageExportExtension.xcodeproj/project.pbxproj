@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4F38E207BDA38843F168502F /* Pods_ImageExport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA7BEAF64A190F763D1D3700 /* Pods_ImageExport.framework */; };
 		9F12923C2139758A0028928D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F12923B2139758A0028928D /* AppDelegate.swift */; };
 		9F12923E2139758A0028928D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F12923D2139758A0028928D /* ViewController.swift */; };
 		9F1292412139758A0028928D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F12923F2139758A0028928D /* Main.storyboard */; };
@@ -59,7 +60,11 @@
 		9F129259213975B90028928D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		9F12925B213975B90028928D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9FB28DA5213BE9A8009AD231 /* ImageExportExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ImageExportExtension.entitlements; sourceTree = "<group>"; };
+		9FC09516213EBC6E00749FEF /* ImageExport.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ImageExport.entitlements; sourceTree = "<group>"; };
+		A0BA507AB2D7EA27AAD1CA04 /* Pods-ImageExport.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImageExport.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ImageExport/Pods-ImageExport.debug.xcconfig"; sourceTree = "<group>"; };
+		B0063BEBBF0BC6ADF56E6927 /* Pods-ImageExport.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImageExport.release.xcconfig"; path = "Pods/Target Support Files/Pods-ImageExport/Pods-ImageExport.release.xcconfig"; sourceTree = "<group>"; };
 		EE918E03076DE48D183ED2AC /* Pods_ImageExportExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ImageExportExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA7BEAF64A190F763D1D3700 /* Pods_ImageExport.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ImageExport.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F38E207BDA38843F168502F /* Pods_ImageExport.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,6 +92,8 @@
 			children = (
 				985F5DC2DA8BE36C46A89283 /* Pods-ImageExportExtension.debug.xcconfig */,
 				709AF2CF0E19EBB6586A7FC5 /* Pods-ImageExportExtension.release.xcconfig */,
+				A0BA507AB2D7EA27AAD1CA04 /* Pods-ImageExport.debug.xcconfig */,
+				B0063BEBBF0BC6ADF56E6927 /* Pods-ImageExport.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -140,6 +148,7 @@
 			isa = PBXGroup;
 			children = (
 				EE918E03076DE48D183ED2AC /* Pods_ImageExportExtension.framework */,
+				FA7BEAF64A190F763D1D3700 /* Pods_ImageExport.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -172,6 +181,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9F12925F213975B90028928D /* Build configuration list for PBXNativeTarget "ImageExport" */;
 			buildPhases = (
+				92FEC53E833E58E232C1B9A3 /* [CP] Check Pods Manifest.lock */,
 				9F129250213975B90028928D /* Sources */,
 				9F129251213975B90028928D /* Frameworks */,
 				9F129252213975B90028928D /* Resources */,
@@ -270,6 +280,24 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ImageExportExtension/Pods-ImageExportExtension-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		92FEC53E833E58E232C1B9A3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ImageExport-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		D914DD60459EFC8F2D7EB849 /* [CP] Check Pods Manifest.lock */ = {
@@ -473,10 +501,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8ZMC86H7GX;
 				INFOPLIST_FILE = ImageExportExtension/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = bbvch13531.ImageExportExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -494,10 +519,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8ZMC86H7GX;
 				INFOPLIST_FILE = ImageExportExtension/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = bbvch13531.ImageExportExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -507,16 +529,13 @@
 		};
 		9F129260213975B90028928D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A0BA507AB2D7EA27AAD1CA04 /* Pods-ImageExport.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = ImageExport/ImageExport.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8ZMC86H7GX;
 				INFOPLIST_FILE = ImageExport/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = bbvch13531.ImageExportExtension.ImageExport;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -527,16 +546,13 @@
 		};
 		9F129261213975B90028928D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B0063BEBBF0BC6ADF56E6927 /* Pods-ImageExport.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = ImageExport/ImageExport.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8ZMC86H7GX;
 				INFOPLIST_FILE = ImageExport/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = bbvch13531.ImageExportExtension.ImageExport;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
