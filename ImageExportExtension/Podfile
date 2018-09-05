@@ -5,3 +5,7 @@ use_frameworks!
 target 'ImageExportExtension' do
     pod 'Alamofire', '~> 4.7'
 end
+
+target 'ImageExport' do
+    pod 'Alamofire', '~> 4.7'
+end

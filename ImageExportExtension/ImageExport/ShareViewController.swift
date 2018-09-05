@@ -34,19 +34,20 @@ class ShareViewController: SLComposeServiceViewController {
         // This is called after the user selects Post. Do the upload of contentText and/or NSExtensionContext attachments.
     
         // Inform the host that we're done, so it un-blocks its UI. Note: Alternatively you could call super's -didSelectPost, which will similarly complete the extension context.
-		let fileManager = FileManager()
+		let fileManager = FileManager.default
 		
 		
 		if let item = self.extensionContext?.inputItems[0] as? NSExtensionItem {
 //			print(item.attachments)
 			for ele in item.attachments!{
 			
+				
 				let itemProvider = ele as! NSItemProvider
 				
-				if itemProvider.hasItemConformingToTypeIdentifier("public.jpg"){
+				if itemProvider.hasItemConformingToTypeIdentifier("public.png"){
 					print(itemProvider)
-					itemProvider.loadItem(forTypeIdentifier: "public.jpg", options: nil, completionHandler: { (item, error) in
-//						do {
+//					itemProvider.loadItem(forTypeIdentifier: "public.jpg", options: nil, completionHandler: { (item, error) in
+//						do{
 //							var imgData: Data!
 //							if let url = item as? URL{
 //								imgData = try Data(contentsOf: url)
