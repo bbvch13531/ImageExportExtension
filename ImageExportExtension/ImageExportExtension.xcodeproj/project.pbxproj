@@ -58,6 +58,7 @@
 		9F129256213975B90028928D /* ShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
 		9F129259213975B90028928D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		9F12925B213975B90028928D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9FB28DA5213BE9A8009AD231 /* ImageExportExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ImageExportExtension.entitlements; sourceTree = "<group>"; };
 		EE918E03076DE48D183ED2AC /* Pods_ImageExportExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ImageExportExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -127,6 +128,7 @@
 		9F129255213975B90028928D /* ImageExport */ = {
 			isa = PBXGroup;
 			children = (
+				9FC09516213EBC6E00749FEF /* ImageExport.entitlements */,
 				9F129256213975B90028928D /* ShareViewController.swift */,
 				9F129258213975B90028928D /* MainInterface.storyboard */,
 				9F12925B213975B90028928D /* Info.plist */,
@@ -203,6 +205,11 @@
 					};
 					9F129253213975B90028928D = {
 						CreatedOnToolsVersion = 9.4.1;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -501,6 +508,7 @@
 		9F129260213975B90028928D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = ImageExport/ImageExport.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8ZMC86H7GX;
 				INFOPLIST_FILE = ImageExport/Info.plist;
@@ -520,6 +528,7 @@
 		9F129261213975B90028928D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = ImageExport/ImageExport.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8ZMC86H7GX;
 				INFOPLIST_FILE = ImageExport/Info.plist;
